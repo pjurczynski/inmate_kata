@@ -13,3 +13,16 @@ Greegko and Piotr are both prisoners, locked in a solitude in separate cells. Th
 ## Hardcore rules
 
 - You can only spend 15 minutes a day actively developing in this repo.
+
+## Testing
+
+To run the tests one shot
+```
+yarn jest
+```
+
+To run the tests in *watch* mode
+
+```
+yarn jest --watch
+```
