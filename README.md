@@ -1,6 +1,6 @@
 # Inmate Kata
 
-Greegko and Piotr are both prisoners, locked in a solitude. There's nothing else left for them other than improving their coding quality together.. 15 minutes at a time.
+Greegko and Piotr are both prisoners, locked in a solitude in separate cells. They cannot communicate in oral, just though letters and code. There's nothing else left for them to live other than improving their coding quality together.. 15 minutes at a time.
 
 ## Rules
 
