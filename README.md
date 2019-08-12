@@ -8,7 +8,8 @@ Greegko and Piotr are both prisoners, locked in a solitude. There's nothing else
 - You can only unskip 1 test a day.
 - You can't write functionality that's not tested.
 - Use only github for communication (issues, comments on commits, code, docs, etc)
+- Do not *read* already done implementations and pseudocode about the problem, discuss the options instead.
 
-## Hardore rules
+## Hardcore rules
 
 - You can only spend 15 minutes a day actively developing in this repo.
