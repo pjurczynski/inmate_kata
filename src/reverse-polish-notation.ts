@@ -1,8 +1,11 @@
 export function reversePolishNotation(_x: string): number {
-  const parts: string[] = _x.split(' ');
-  if (parts.length === 2) {
+  if (!isValid(_x)) {
     throw new Error('no operator');
   }
 
   return parseInt(_x || '0');
+}
+
+function isValid(_x: string) {
+  return _x.split(' ').length !== 2;
 }
