@@ -8,4 +8,8 @@ describe('ReversePolishNotation', () => {
   it('should return a number if only one number is in a string', () => {
     expect(reversePolishNotation('9')).toEqual(9);
   });
+
+  it('should throw error if we do not have operator for two numbers', () => {
+    expect(() => reversePolishNotation('9 9')).toThrowError();
+  });
 });
