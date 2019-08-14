@@ -12,4 +12,8 @@ describe('ReversePolishNotation', () => {
   it('should throw error if we do not have operator for two numbers', () => {
     expect(() => reversePolishNotation('9 9')).toThrowError();
   });
+
+  it.skip('should return a result of a correct binary operation', () => {
+    expect(reversePolishNotation('9 9 +')).toEqual(18);
+  });
 });
