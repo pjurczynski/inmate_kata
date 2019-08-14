@@ -1,3 +1,3 @@
 export function reversePolishNotation(_x: string): number {
-  return 0;
+  return parseInt(_x || '0');
 }
