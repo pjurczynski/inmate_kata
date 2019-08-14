@@ -1,11 +1,11 @@
-export function reversePolishNotation(_x: string): number {
-  if (!isValid(_x)) {
+export function reversePolishNotation(x: string): number {
+  if (!isValid(x)) {
     throw new Error('no operator');
   }
 
-  return parseInt(_x || '0');
+  return parseInt(x || '0');
 }
 
-function isValid(_x: string) {
-  return _x.split(' ').length !== 2;
+function isValid(x: string) {
+  return x.split(' ').length !== 2;
 }
