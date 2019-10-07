@@ -3,6 +3,12 @@ export function reversePolishNotation(x: string): number {
     throw new Error('no operator');
   }
 
+  const [a, b, operator] = x.split(' ');
+
+  if (operator === '+') {
+    return parseInt(a) + parseInt(b);
+  }
+
   return parseInt(x || '0');
 }
 

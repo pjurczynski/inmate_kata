@@ -13,7 +13,7 @@ describe('ReversePolishNotation', () => {
     expect(() => reversePolishNotation('9 9')).toThrowError();
   });
 
-  it.skip('should return a result of a valid binary operation', () => {
+  it('should return a result of a plus binary operation', () => {
     expect(reversePolishNotation('9 9 +')).toEqual(18);
   });
 });
