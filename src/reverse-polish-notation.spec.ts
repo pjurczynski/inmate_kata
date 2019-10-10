@@ -17,7 +17,7 @@ describe('ReversePolishNotation', () => {
     expect(reversePolishNotation('9 9 +')).toEqual(18);
   });
 
-  it.skip('should return a result of a multiply binary operation', () => {
+  it('should return a result of a multiply binary operation', () => {
     expect(reversePolishNotation('9 9 *')).toEqual(81);
   });
 });

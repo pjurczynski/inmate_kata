@@ -5,6 +5,10 @@ export function reversePolishNotation(x: string): number {
 
   const [a, b, operator] = x.split(' ');
 
+  if (operator === '*') {
+    return parseInt(a) * parseInt(b);
+  }
+
   if (operator === '+') {
     return parseInt(a) + parseInt(b);
   }
