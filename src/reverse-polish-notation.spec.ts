@@ -24,4 +24,8 @@ describe('ReversePolishNotation', () => {
   it('should return a result of a minus binary operation', () => {
     expect(reversePolishNotation('8 9 -')).toEqual(-1);
   });
+
+  it.skip('should return a result of a division binary operation', () => {
+    expect(reversePolishNotation('16 8 /')).toEqual(2);
+  });
 });
