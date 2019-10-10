@@ -21,7 +21,7 @@ describe('ReversePolishNotation', () => {
     expect(reversePolishNotation('9 9 *')).toEqual(81);
   });
 
-  it.skip('should return a result of a minus binary operation', () => {
+  it('should return a result of a minus binary operation', () => {
     expect(reversePolishNotation('8 9 -')).toEqual(-1);
   });
 });

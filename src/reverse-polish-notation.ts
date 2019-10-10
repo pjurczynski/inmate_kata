@@ -13,6 +13,10 @@ export function reversePolishNotation(x: string): number {
     return parseInt(a) + parseInt(b);
   }
 
+  if (operator === '-') {
+    return parseInt(a) - parseInt(b);
+  }
+
   return parseInt(x || '0');
 }
 
