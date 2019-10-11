@@ -28,4 +28,8 @@ describe('ReversePolishNotation', () => {
   it('should return a result of a division binary operation', () => {
     expect(reversePolishNotation('16 8 /')).toEqual(2);
   });
+
+  it('should return a result of multiple binary operations', () => {
+    expect(reversePolishNotation('1 1 + 1 +')).toEqual(3);
+  });
 });
