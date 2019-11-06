@@ -20,7 +20,7 @@ describe('Bowling game', () => {
       expect(newState).toEqual({ rounds: [[7, 3]] });
     });
 
-    it.skip('should start a new round', () => {
+    it('should start a new round', () => {
       const state: BowlingGameState = { rounds: [[1, 9]] };
       const pins = 8;
 

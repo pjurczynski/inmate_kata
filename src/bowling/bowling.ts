@@ -14,5 +14,9 @@ export function roll(pins: Pins, state: BowlingGameState) {
 
   const latestRound = state.rounds.pop() || [];
 
+  if (latestRound.length === 2) {
+    return { ...state, rounds: [...state.rounds, latestRound, [pins]] };
+  }
+
   return { ...state, rounds: [...state.rounds, [...latestRound, pins]] };
 }
