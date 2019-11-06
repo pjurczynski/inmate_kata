@@ -12,17 +12,18 @@ export function roll(pins: Pins, state: BowlingGameState) {
     return { ...state, rounds: [[pins]] };
   }
 
-  const latestRound = state.rounds[state.rounds.length - 1] || [];
+  const rounds = state.rounds.slice();
+  const latestRound = rounds.pop() || [];
 
   if (latestRound.length === 2) {
     return {
       ...state,
-      rounds: [...state.rounds.slice(1, state.rounds.length - 1), latestRound, [pins]],
+      rounds: [...rounds, latestRound, [pins]],
     };
   }
 
   return {
     ...state,
-    rounds: [...state.rounds.slice(1, state.rounds.length - 1), [...latestRound, pins]],
+    rounds: [...rounds, [...latestRound, pins]],
   };
 }
