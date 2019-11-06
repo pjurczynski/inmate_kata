@@ -8,11 +8,7 @@ export interface BowlingGameState {
 type Pins = number;
 
 export function roll(pins: Pins, state: BowlingGameState) {
-  if (!state.rounds) {
-    return { ...state, rounds: [[pins]] };
-  }
-
-  const rounds = state.rounds.slice();
+  const rounds = (state.rounds || []).slice();
   const latestRound = rounds.pop() || [];
 
   if (latestRound.length === 2) {
