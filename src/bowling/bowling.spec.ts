@@ -28,5 +28,14 @@ describe('Bowling game', () => {
 
       expect(newState).toEqual({ rounds: [[1, 9], [8]] });
     });
+
+    it.skip('should start a new round if previous roll was a strike', () => {
+      const state: BowlingGameState = { rounds: [[10]] };
+      const pins = 1;
+
+      const newState = roll(pins, state);
+
+      expect(newState).toEqual({ rounds: [[10], [1]] });
+    });
   });
 });
