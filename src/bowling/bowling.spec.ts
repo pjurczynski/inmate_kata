@@ -50,5 +50,18 @@ describe('Bowling game', () => {
         rounds: [[10], [10], [10], [10], [10], [10], [10], [10], [10], [10, 10]],
       });
     });
+
+    it.skip('in last round, you can score 3 tens', () => {
+      const state: BowlingGameState = {
+        rounds: [[10], [10], [10], [10], [10], [10], [10], [10], [10], [10, 10]],
+      };
+      const pins = 10;
+
+      const newState = roll(pins, state);
+
+      expect(newState).toEqual({
+        rounds: [[10], [10], [10], [10], [10], [10], [10], [10], [10], [10, 10, 10]],
+      });
+    });
   });
 });
