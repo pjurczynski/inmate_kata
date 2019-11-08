@@ -38,7 +38,7 @@ describe('Bowling game', () => {
       expect(newState).toEqual({ rounds: [[10], [1]] });
     });
 
-    it.skip('in last round, you can score 2 tens', () => {
+    it('in last round, you can score 2 tens', () => {
       const state: BowlingGameState = {
         rounds: [[10], [10], [10], [10], [10], [10], [10], [10], [10], [10]],
       };

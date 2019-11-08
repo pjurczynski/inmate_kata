@@ -12,6 +12,10 @@ export function roll(pins: Pins, state: BowlingGameState) {
   const rounds = (state.rounds || []).slice();
   const latestRound: Round = rounds.pop() || [];
 
+  if (rounds.length === 9 && latestRound[0] === 10) {
+    return setRounds(state, [...rounds, [...latestRound, pins]]);
+  }
+
   if (roundFinished(latestRound)) {
     return setRounds(state, [...rounds, latestRound, [pins]]);
   }
