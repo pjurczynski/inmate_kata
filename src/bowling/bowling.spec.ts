@@ -51,7 +51,7 @@ describe('Bowling game', () => {
       });
     });
 
-    it.skip('in last round, you can score 3 tens', () => {
+    it('in last round, you can score 3 tens', () => {
       const state: BowlingGameState = {
         rounds: [[10], [10], [10], [10], [10], [10], [10], [10], [10], [10, 10]],
       };
