@@ -1,8 +1,7 @@
 type Round = [number, number?];
-type FinalRound = [number, number?, number?];
 
 export interface BowlingGameState {
-  rounds?: Array<Round | FinalRound>;
+  rounds?: Array<Round>;
 }
 
 type Pins = number;
@@ -11,9 +10,9 @@ const STRIKE = 10;
 
 export function roll(pins: Pins, state: BowlingGameState) {
   const rounds = (state.rounds || []).slice();
-  const latestRound = rounds.pop() || [];
+  const latestRound: Round | [] = rounds.pop() || [];
 
-  if (normalRoundFinished(latestRound as Round)) {
+  if (roundFinished(latestRound)) {
     return {
       ...state,
       rounds: [...rounds, latestRound, [pins]],
@@ -26,6 +25,6 @@ export function roll(pins: Pins, state: BowlingGameState) {
   };
 }
 
-function normalRoundFinished(latestRound: Round | []) {
+function roundFinished(latestRound: Round | []) {
   return latestRound.length === 2 || latestRound[0] === STRIKE;
 }
