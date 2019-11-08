@@ -63,5 +63,14 @@ describe('Bowling game', () => {
         rounds: [[10], [10], [10], [10], [10], [10], [10], [10], [10], [10, 10, 10]],
       });
     });
+
+    it.skip('once the game is finished, trying to add more pins results in an error', () => {
+      const state: BowlingGameState = {
+        rounds: [[10], [10], [10], [10], [10], [10], [10], [10], [10], [10, 10, 10]],
+      };
+      const pins = 10;
+
+      expect(() => roll(pins, state)).toThrowErrorMatchingInlineSnapshot('Game has finished');
+    });
   });
 });
